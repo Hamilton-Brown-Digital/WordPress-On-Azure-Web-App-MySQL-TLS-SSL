@@ -6,7 +6,7 @@
 
 ---
 
-The ```BaltimoreCyberTrustRoot.crt.pem`` certificate is required to link the deployed Web App to an existing Azure MySQL resource (with TLS 1.2 enabled and SSL enforced).
+The ```BaltimoreCyberTrustRoot.crt.pem``` certificate is required to link the deployed Web App to an existing Azure MySQL resource (with TLS 1.2 enabled and SSL enforced).
 
 **Please check certificate expiry before deployment.**
 
