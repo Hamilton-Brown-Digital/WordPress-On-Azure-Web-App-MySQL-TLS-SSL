@@ -14,7 +14,7 @@ The ```BaltimoreCyberTrustRoot.crt.pem``` certificate is required to link the de
 
 ---
 
-**The current WordPress version hosted in this repository is: 5.5.3**
+## The current WordPress version hosted in this repository is: 5.5.3
 
 ---
 
