@@ -1,18 +1,16 @@
 # Six Degrees - WordPress on Azure Web App
 
-**WARNING - THIS IS A PUBLIC FACING REPOSITORY**
-
 > A WordPress install set to run on an Azure Web App and link to an Azure MySQL instance that has TLS 1.2 enabled and SSL enforced
 
 ---
 
 The ```BaltimoreCyberTrustRoot.crt.pem``` certificate is required to link the deployed Web App to an existing Azure MySQL resource (with TLS 1.2 enabled and SSL enforced).
 
-**Please check certificate expiry before deployment.**
-
 [Download the 'Baltimore CyberTrust Root' PEM from here](https://www.digicert.com/kb/digicert-root-certificates.htm).
 
 **The certificate must reside in the root of the site directory with the name 'BaltimoreCyberTrustRoot.crt.pem'.**
+
+**Please check certificate expiry before deployment.**
 
 ---
 
