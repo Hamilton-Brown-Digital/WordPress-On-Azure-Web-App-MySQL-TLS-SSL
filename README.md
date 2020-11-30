@@ -12,11 +12,13 @@ The ```BaltimoreCyberTrustRoot.crt.pem`` certificate is required to link the dep
 
 [Download the 'Baltimore CyberTrust Root' PEM from here](https://www.digicert.com/kb/digicert-root-certificates.htm).
 
-The certificate resides in the root of the site directory.
+**The certificate must reside in the root of the site directory with the name 'BaltimoreCyberTrustRoot.crt.pem'.**
 
 ---
 
 **The current WordPress version hosted in this repository is: 5.5.3**
+
+---
 
 Two WordPress files have been modified to facilitate the secure connection between the Azure Web App (running the WordPress files) and the Azure Database for MySQL instance:
 
