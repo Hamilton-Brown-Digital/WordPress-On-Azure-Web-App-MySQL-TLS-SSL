@@ -8,11 +8,19 @@
 
 The ```BaltimoreCyberTrustRoot.crt.pem`` certificate is required to link the deployed Web App to an existing Azure MySQL resource (with TLS 1.2 enabled and SSL enforced).
 
+**Please check certificate expiry before deployment.**
+
 [Download the 'Baltimore CyberTrust Root' PEM from here](https://www.digicert.com/kb/digicert-root-certificates.htm).
 
-The cert resides in the root of the site directory.
+The certificate resides in the root of the site directory.
 
-[wp-config.php](wp-config.php) includes Azure specific references as well as a link to the above certificate:
+---
+
+**The current WordPress version hosted in this repository is: 5.5.3**
+
+Two WordPress files have been modified to facilitate the secure connection between the Azure Web App (running the WordPress files) and the Azure Database for MySQL instance:
+
+[wp-config.php](wp-config.php) includes Azure specific references as well as a link to the above certificate. The below highlights the modifications:
 
 ```
 $connectstr_dbhost = getenv('DATABASE_HOST');
@@ -44,7 +52,7 @@ define('MYSQL_SSL_CA_PATH','BaltimoreCyberTrustRoot.crt.pem');
 define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL | MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
 ```
 
-*Note in the above, ```getenv``` refers to the Application Settings required to link the App to the database.*
+*Note in the above, ```getenv``` refers to the Azure Web App - Application Settings required to link the App to the database.*
 
 [wp-db.php](wp-includes/wp-db.php) also contains a reference to the certificate:
 
