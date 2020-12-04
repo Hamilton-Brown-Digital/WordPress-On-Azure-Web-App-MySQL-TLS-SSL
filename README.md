@@ -59,3 +59,22 @@ define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL | MYSQLI_CLIENT_SSL_DONT_VERIFY_S
 ```
 mysqli_ssl_set($this->dbh, NULL, NULL, ABSPATH . 'BaltimoreCyberTrustRoot.crt.pem', NULL, NULL);
 ```
+
+**Update:**
+
+An [.htaccess](.htaccess) file has beed added to allow site specific PHP customisations. The file format must follow the below:
+
+```
+php_value setting value
+```
+
+Example:
+
+```
+php_value upload_max_filesize 2GB
+php_value max_input_vars 3000
+php_value memory_limit 256M
+php_value max_input_time 1000
+```
+
+[Reference: Configure a PHP app for Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/configure-language-php?pivots=platform-linux#customize-phpini-settings)
